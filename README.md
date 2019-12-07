@@ -10,8 +10,10 @@ None. Anyone with basic familiarity with computers can follow the course. You
 will need to install the following software to make the best use of the
 materials:
 
-* A text editor - [RStudio](http://rstudio.com)
-	[VSCode](https://code.visualstudio.com/) - [Neovim](http://neovim.io)
+* A text editor 
+	- [RStudio](http://rstudio.com)
+	- [VSCode](https://code.visualstudio.com/) 
+	- [Neovim](http://neovim.io)
 
 * A [`LaTeX` distribution](https://www.latex-project.org/get/)
 
@@ -35,7 +37,7 @@ to learn the basics of Markdown editing. It's available
 You can also find a lot of good information on Markdown on the internet such as
 [this
 cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-If you ave any questions, just google your issue and you will probably find an
+If you have any questions, just google your issue and you will probably find an
 answer on [StackOverflow](http://stackoverflow.com).
 
 ## Anything else?
