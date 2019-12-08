@@ -11,7 +11,8 @@ will need to install the following software to make the best use of the
 materials:
 
 * A text editor
-	- [RStudio](http://rstudio.com) [VSCode](https://code.visualstudio.com/)
+	- [RStudio](http://rstudio.com) 
+	- [VSCode](https://code.visualstudio.com/)
 	- [Neovim](http://neovim.io)
 
 * A [`LaTeX` distribution](https://www.latex-project.org/get/)
