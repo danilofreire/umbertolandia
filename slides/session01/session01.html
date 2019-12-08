@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Tools of the trade</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Danilo Freire" />
+    <meta name="date" content="2019-12-11" />
+    <link href="session01_files/remark-css/default.css" rel="stylesheet" />
+    <link href="session01_files/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="session01_files/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Tools of the trade
+## Plain text social science: git, GitHub, and Markdown
+### Danilo Freire
+### 11 December 2019
+
+---
+
+
+
+
+&lt;style&gt;
+
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 6px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #EB811B;
+}
+
+.orange {
+  color: #EB811B;
+}
+&lt;/style&gt;
+
+# Overview
+
+.font150[
+* Why plain text?
+
+* Reproducibility, flexibility, and control
+
+* (R)Markdown basics: how to write awesome documents with minimal effort 
+
+* Git basics: add, commit, push, pull, merge
+
+* GitHub: git on the cloud
+
+* Homework
+]
+
+---
+
+# Why plain text? 
+ 
+ .font150[
+* Plain text is just text without any tags or special formatting
+
+* Plain text has been around for as long as computers have
+
+* They're interoperable, easy to read and write, lightweight, and backward/forward-compatible
+
+* Many open source tools handle pure text very well, and they're the most powerful tools we have for many tasks, such as
+	- Text editing: LaTeX, Markdown
+	- Statistical analysis: R
+	- General computing: Python, C, etc
+]
+
+---
+
+# Why plain text?  
+
+.font150[
+* Plain text is useful for researchers for other reasons too
+
+* You can open them in virtually every computer, which increases research reproducibility
+
+* As they can be read with open source software, we can reproduce our research for free
+
+* You can also track every change in the file, which increases transparency
+
+* Remember that the first person who will reproduce your code is _yourself in the future_
+]
+
+---
+
+# Why plain text?   
+
+.font150[
+* In a nutshell, plain text:
+	- Improves reproducibility
+	- Increases transparency
+	- Works with the best software
+	- Is free!]
+--
+
+.font150[
+* To sum up:
+	- _Plain text = good_
+	- _Office = bad_
+
+* You will learn how to use plain text today!
+]
+
+---
+
+class: inverse, center, middle
+
+# (R)Markdown
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=800px&gt;&lt;/html&gt; 
+
+---
+
+# (R)Markdown 
+
+.font140[
+* Markdown is a simple document markup language with formatting in pure text
+
+* It can be easily converted to many other formats, such as `pdf`, `docx`, `html`, `epub`, and many others using [pandoc](http://pandoc.org)
+
+* It is also _very easy_ to use: One can learn the basics in just a few minutes (!)
+
+* [RMarkdown](https://rmarkdown.rstudio.com/) is just a version of markdown with some cool `R` features, such as embedded graphs, transparent reports, etc
+
+* We will use markdown _in all papers we will write together_]
+
+---
+
+# (R)Markdown basics
+
+.font140[
+* The easiest way to learn markdown is to see a markdown-formatted file]
+
+.pull-left[![:scale 90%](md01.png)]
+.pull-right[![:scale 50%](md02.png)]
+
+---
+
+# (R)Markdown basics
+
+.center[![:scale 100%](md03.png)]
+
+---
+
+# RMarkdown templates
+
+.font150[
+* To make our life easier, I've already uploaded a series of pre-formatted templates for RMarkdown
+
+* Here: &lt;https://github.com/danilofreire/rmarkdown-templates&gt;
+
+* We will use the article template very often. It should work out of the box
+
+* You can download the zip file on GitHub, then open the contents in [RStudio](http://rstudio.com)
+
+* But you will need to install [LaTeX](https://www.latex-project.org/) and [pandoc](pandoc.org) first]
+
+---
+
+# RMarkdown templates 
+
+.font150[
+* After installing the required software, go to RStudio and install the following package:
+
+
+```r
+install.packages("rmarkdown")
+```
+
+* Then just click on the `knit` buttom and voilà!
+
+* If you have any questions about RMarkdown formatting, just google your issue and you will surely find an answer to it
+
+* Or just look at the examples in the [template repository](https://github.com/danilofreire/rmarkdown-templates) to see how to write something you need
+]
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=800px&gt;&lt;/html&gt; 
+
+---
+
+# Git
+
+.font150[
+* Git is a version for software code control
+
+* That is, it allows users to write, compare, integrate, and check their code
+
+* Developed by Linus Torvalds of Linux fame, it is used by virtually every tech company in the world
+
+* Increasingly used by scholars too
+
+* It is _fully transparent_ as all changes in the code are permanently recorded, and it allows for full reproducibility as one can move to any point in the development history
+]
+
+---
+
+# Configuring git and adding files
+
+.font120[
+* Install it [here](https://git-scm.com/)
+
+* Setup:
+
+```
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+* Create a git repository:
+
+```
+cd /Users/user/my_project
+git init
+```
+
+* Add files
+
+```
+git add cool-markdown-text.md
+git commit -am "add markdown file with introduction"
+```
+
+* Your file is already tracked by git! But we need to upload it so others can see it...]
+
+---
+
+# GitHub
+
+.font150[
+* We will upload our files to [GitHub repositories](http://github.com) 
+
+* GitHub is a platform where people share their code
+
+* Many great projects are hosted there, such as [Linux](github.com/torvals/linux), [Android](https://github.com/android), [Tensorflow](https://github.com/tensorflow/tensorflow), [Bitcoin](https://github.com/bitcoin/bitcoin), and even [the original code of the Apollo 11 mission!](https://github.com/chrislgarry/apollo-11)
+
+* Your code will be in great company!
+
+* _We will use GitHub for all projects we will do together_
+]
+
+---
+
+# GitHub 
+
+.font150[
+* After you create an account on GitHub, you can either create a new repository or fork (copy) an existing one
+
+* Let's clone this course repository:
+
+.center[![:scale 100%](git-clone.png)]
+
+```
+git clone https://github.com/danilofreire/umbertolandia.git
+```
+]
+
+---
+
+# Uploading files to GitHub
+
+.font120[
+* Now that we have our repository, imagine you want to change the `README.md` file within the folder
+
+* You open it in RStudio and modify it as you wish. Then, type:
+
+```
+git add README.md
+git commit -am "fixed a few typos in the header"
+git push origin master
+```
+
+* And the file will be online in the `master` branch!
+
+* To upload your files to a new repository, create one on GitHub first then follow their instructions. They're almost the same as those above
+
+* If your colleague updated one or more files and uploaded them into the repository, you can update your local folder with 
+
+```
+git pull
+```
+]
+
+---
+
+# Fork, branch, and merge
+
+.font140[
+* You can also create your own copy of an existing repository with _forks_
+
+* They're super easy to do on GitHub:
+
+* Go to the repository website and click on the `Fork` buttom: GitHub will create your copy and you can modify it as you wish]
+
+.center[![:scale 90%](torvalds.png)]
+
+---
+
+# Fork, branch, and merge
+
+* If you're working on a project by yourself, you can upload all changes to the `master` branch
+
+* But if you work with more people, it is recommended that you make your own changes first, test them, and upload them to _your branch_. 
+
+* A branch is a copy of the repository that does not affect the `master` branch, but can be integrated into/from it if necessary
+
+* To create a new branch and work on it, type:
+
+```
+git checkout -b my-new-branch
+(make your changes)
+git add .
+git commit -am "my changes"
+git push origin my-new-branch
+```
+* These commands will only affect your branch of the code. If you think they're good to go, you can merge them with the `master` branch
+
+```
+git checkout master
+git merge my-new-branch
+```
+
+---
+
+# Basic git workflow
+
+.center[![:scale 90%](git-basic.png)]
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=800px&gt;&lt;/html&gt; 
+---
+
+# Takeaways
+
+.font110[
+* Plain text is the best way to collaborate with your colleagues and your future self
+
+* All tools we need are free, open source, and easy to use; they just take a bit of practice to get used to
+
+* These tools are very robust, that is, you will likely be using them (or very similar ones) for years to come
+
+* You will also quickly learn _how to think as a programmer_, and this has massive benefits for your future career
+
+* You can use GitHub to [host your website](http://danilofreire.github.io) and use your projects [as your personal portfolio](https://danilofreire.github.io/pinochet/) 
+
+* You can also _star_ someone else's repository and be up-to-date with the advances in your discipline! There are millions of interesting repositories there! 
+]
+
+---
+
+# Homework
+
+.font150[
+* Create an account on GitHub and fork the `umbertolandia` repository (create your own copy)
+
+* Create a Markdown file with sections, subsections, text, bullet points, an internet link, and a picture
+
+* Add, commit, and push it into your fork 
+
+* Show your repository to me tomorrow!
+
+* Now that you know the tools we will use, tomorrow we start discussing how to write a scientific paper using RMarkdown+pandoc+GitHub!
+]
+
+---
+
+class: inverse, center, middle
+
+# And That's All, Folks! Questions?
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=800px&gt;&lt;/html&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"ratio": "4:3",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> "
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
