@@ -11,8 +11,7 @@ will need to install the following software to make the best use of the
 materials:
 
 * A text editor
-	- [RStudio](http://rstudio.com)
-	- [VSCode](https://code.visualstudio.com/)
+	- [RStudio](http://rstudio.com) [VSCode](https://code.visualstudio.com/)
 	- [Neovim](http://neovim.io)
 
 * A [`LaTeX` distribution](https://www.latex-project.org/get/)
@@ -32,7 +31,7 @@ materials:
 
 ## Markdown
 
-Please refer to the simple Markdown I've included in this repository if you need
+Please refer to the simple Markdown tutorial I've included in this repository if you need
 to learn the basics of Markdown editing. It's available
 [here](http://github.com/danilofreire/umbertolandia/why-markdown.md).
 
@@ -48,4 +47,5 @@ That's all you need! One good reference for using plain text tools in the social
 sciences is this great book by [Kieran Healy](https://kieranhealy.org/), [_The
 Plain Person's Guide to Plain Text Social Science_](http://plain-text.co/). It
 covers pretty much all you need, even though he uses [emacs](http://emacs.org)
-instead of [vim](http://vim.org), unfortunately. :smile:
+instead of [vim](http://vim.org),
+[unfortunately](https://en.wikipedia.org/wiki/Editor_war). :smile:
